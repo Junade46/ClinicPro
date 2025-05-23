@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.dam.vista","l":"Auxiliar"},{"p":"com.dam.modelo","l":"HistorialMedico"},{"p":"com.dam.vista","l":"Main"},{"p":"com.dam.modelo","l":"Medico"},{"p":"com.dam.modelo","l":"Paciente"}];updateSearchResults();

@@ -63,11 +63,35 @@ public class Medico {
 
     // --- Métodos de gestión de pacientes ---
 
+    /**
+     * Agrega un nuevo paciente a la lista de pacientes del médico.
+     *
+     * Este metodo registra un nuevo paciente en el sistema añadiéndolo a la lista interna
+     * de pacientes del medico.
+     * Después de la adicion, se muestra un mensaje de confirmación
+     * en la consola indicando el nombre del paciente dado de alta.
+     *
+     * @author Juande
+     * @version 1.0
+     * @since 23/05/2025
+     */
     public void darAltaPaciente(Paciente paciente) {
         pacientes.add(paciente);
         System.out.println("Paciente " + paciente.getNombre() + " dado de alta.");
     }
 
+    /**
+     * Elimina un paciente de la lista de pacientes del medico según su ID.
+     *
+     * Este metodo busca al paciente con el ID especificado dentro de la lista de pacientes del medico.
+     * Si lo encuentra, lo elimina de la lista y muestra un mensaje de confirmacion.
+     * Si no se encuentra un paciente con ese ID, se muestra un mensaje indicando que no se encontro.
+     *
+     * @author Juande
+     * @version 1.0
+     * @since 23/05/2025
+     * @param idPaciente El ID del paciente que se desea dar de baja.
+     */
     public void darBajaPaciente(int idPaciente) {
         boolean eliminado = pacientes.removeIf(p -> p.getIdPaciente() == idPaciente);
         if (eliminado) {
@@ -77,12 +101,35 @@ public class Medico {
         }
     }
 
+    /**
+     * Actualiza la informacion de contacto de un paciente.
+     *
+     * Este metodo modifica el numero de telefono y el correo electronico de un paciente
+     * utilizando los nuevos valores proporcionados. Despues de actualizar los datos,
+     * se muestra un mensaje de confirmacion en la consola.
+     *
+     * @author Juande
+     * @version 1.0
+     * @since 23/05/2025
+     * @param nuevoTelefono El nuevo numero de telefono del paciente.
+     * @param nuevoEmail El nuevo correo electronico del paciente.
+     */
     public void editarInfoPaciente(Paciente paciente, String nuevoTelefono, String nuevoEmail) {
         paciente.setTelefono(nuevoTelefono);
         paciente.setEmail(nuevoEmail);
-        System.out.println("Información del paciente actualizada.");
+        System.out.println("Informacion del paciente actualizada.");
     }
 
+    /**
+     * Muestra en consola la lista de pacientes asignados al medico.
+     *
+     * Este metodo imprime el nombre del medico seguido de una lista de sus pacientes.
+     * Si no hay pacientes registrados, se muestra un mensaje indicandolo.
+     *
+     * @author Juande
+     * @version 1.0
+     * @since 23/05/2025
+     */
     public void listarPacientes() {
         System.out.println("Pacientes del Dr. " + nombre + ":");
         if (pacientes.isEmpty()) {

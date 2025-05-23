@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.dam.modelo"},{"l":"com.dam.vista"}];updateSearchResults();
